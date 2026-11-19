@@ -1,0 +1,190 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Book a Class — S43 Yoga Studio</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+
+<body>
+
+<header class="site-header">
+  <a class="brand" href="index.html">
+    <span class="brand-mark">S43</span>
+    <span>YOGA STUDIO<small>MOVE · BREATHE · BEGIN</small></span>
+  </a>
+
+  <button class="menu-toggle" aria-label="Toggle navigation" aria-expanded="false">☰</button>
+
+  <nav class="nav">
+    <a href="index.html">Home</a>
+    <a href="poses.html">Yoga Classes</a>
+    <a href="videos.html">Yoga Videos</a>
+    <a class="active nav-cta" href="booking.html">Book a Class</a>
+  </nav>
+</header>
+
+<main>
+
+<section class="page-hero wrap">
+  <p class="eyebrow">MAKE TIME FOR YOURSELF</p>
+  <h1>Reserve your<br><em>practice space.</em></h1>
+  <p class="lead">
+    Choose your preferred yoga class and submit your booking request.
+    Our team will receive your details by email.
+  </p>
+</section>
+
+<section class="section soft">
+
+<div class="wrap booking-layout">
+
+<div>
+  <p class="eyebrow">YOUR CLASS REQUEST</p>
+  <h2>Let's get you <em>started.</em></h2>
+
+  <p class="section-copy">
+    Complete the form below to request your preferred yoga session.
+  </p>
+
+  <div class="notice">
+    <strong>Booking information</strong>
+    <p>
+      Your booking request will be sent to our designated
+      booking email. Submission does not guarantee a confirmed
+      class reservation. We will contact you regarding availability.
+    </p>
+  </div>
+</div>
+
+<form id="bookingForm" class="booking-form"
+action="https://formsubmit.co/suruchikumari578th@gmail.com"
+method="POST">
+
+<input type="hidden" name="_subject" value="New S43 Yoga Studio Booking">
+<input type="hidden" name="_template" value="table">
+
+  <label>
+    Full name
+    <input type="text" name="name" placeholder="Your name" required minlength="2">
+  </label>
+
+  <label>
+    Email address
+    <input type="email" name="email" placeholder="you@example.com" required>
+  </label>
+
+  <label>
+    Choose a class
+    <select name="className" id="classChoice" required>
+      <option value="">Select a class</option>
+      <option>Hatha Yoga</option>
+      <option>Vinyasa Flow</option>
+      <option>Power Yoga</option>
+      <option>Meditation</option>
+      <option>Pranayama</option>
+    </select>
+  </label>
+
+  <label>
+    Preferred date
+    <input type="date" name="date" id="bookingDate" required>
+  </label>
+
+  <label>
+    Preferred time
+    <select name="time" required>
+      <option value="">Choose a time</option>
+      <option>7:00 AM</option>
+      <option>9:00 AM</option>
+      <option>5:00 PM</option>
+      <option>6:30 PM</option>
+    </select>
+  </label>
+
+  <fieldset>
+    <legend>Experience level</legend>
+
+    <label class="radio-label">
+      <input type="radio" name="level" value="Beginner" required>
+      Beginner
+    </label>
+
+    <label class="radio-label">
+      <input type="radio" name="level" value="Intermediate">
+      Intermediate
+    </label>
+
+    <label class="radio-label">
+      <input type="radio" name="level" value="Advanced">
+      Advanced
+    </label>
+  </fieldset>
+
+  <label class="check-label">
+    <input type="checkbox" name="agree" required>
+    I agree to submit my information for booking enquiries.
+  </label>
+
+  <button class="btn" id="bookingSubmit" type="submit">
+    Submit Booking ↗
+  </button>
+
+  <p id="bookingMessage" class="form-message" role="status"></p>
+
+</>
+
+</div>
+</section>
+
+<section class="section wrap">
+
+  <div class="section-heading">
+    <div>
+      <p class="eyebrow">YOUR SAVED REQUESTS</p>
+      <h2>Practice <em>plans.</em></h2>
+    </div>
+
+    <button id="clearBookings" class="btn btn-outline" type="button">
+      Clear all
+    </button>
+  </div>
+
+  <div id="bookingList" class="booking-list">
+    <p class="empty-state">No saved requests yet.</p>
+  </div>
+
+</section>
+
+</main>
+
+<footer class="footer">
+  <div class="wrap footer-inner">
+
+    <a class="brand brand-footer" href="index.html">
+      <span class="brand-mark">S43</span>
+      <span>YOGA STUDIO<small>MOVE · BREATHE · BEGIN</small></span>
+    </a>
+
+    <p>Find your balance, one breath at a time.</p>
+
+    <div class="footer-links">
+      <a href="index.html">Home</a>
+      <a href="poses.html">Classes</a>
+      <a href="videos.html">Videos</a>
+    </div>
+
+    <small>© <span id="year"></span> S43 Yoga Studio.</small>
+
+  </div>
+</footer>
+
+</body>
+</html>
